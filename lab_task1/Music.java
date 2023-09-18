@@ -1,5 +1,7 @@
 package lab_task1;
 
+import java.util.Objects;
+
 public class Music {
     private String title;
     private String duration;
@@ -61,4 +63,16 @@ public class Music {
     public String toString() {
         return String.format("%s %s %s %s %s",title,duration,genre,releaseDate,singer);
     }
+
+    public boolean equals(Music m1, Music m2) {
+       return this.title.equals(m1.title)?true:false;
+    }
+
+//    public boolean equals(Object o) {
+//        if (this == o) return true;
+//        if (o == null || getClass() != o.getClass()) return false;
+//        Music music = (Music) o;
+//        return Objects.equals(title, music.title);
+//    }
+
 }
